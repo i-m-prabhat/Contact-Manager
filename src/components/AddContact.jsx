@@ -14,6 +14,9 @@ export default class AddContact extends Component
             alert("All the Fields are Mandatory!");
             return;
         }
+        this.props.addContactHandler(this.state);
+        this.setState({name: "", mobile: "", email: ""})
+        console.log(this.state);
     }
     render()
     {
